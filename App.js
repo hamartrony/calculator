@@ -42,7 +42,6 @@ export default function App() {
       setOperator(op);
       setCurrent(1);
       setDisplay(true);
-      // setValue("");
       return;
     } //se ja tiver algum valor no array
     else {
@@ -51,7 +50,6 @@ export default function App() {
 
       //tenta modificar a posição 0 de values, caso a operação seja bem sucedida
       try {
-        console.log(value[0], value[1]);
         value[0] = eval(`${value[0]} ${operator} ${value[1]}`); //eval verifica se e possivel realizar a operação e insere na posicao 0
       } catch (e) {
         value[0] = values[0]; //se nao for possivel realizer operarção, value[0] retoma o valor do array no state
